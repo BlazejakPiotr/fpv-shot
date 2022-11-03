@@ -1,9 +1,10 @@
-import Navbar from "./components/navbar";
+import styled from "styled-components";
+import HamburgerMenu from "./components/hamburger-menu";
 
 function App() {
   return (
     <div>
-      <Navbar /> Hello world
+      <HamburgerMenu /> Hello world
     </div>
   );
 }
