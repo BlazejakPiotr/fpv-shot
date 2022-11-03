@@ -13,6 +13,7 @@ const HamburgerMenu = () => {
         size={32}
         onClick={() => handleMenuVisibility(isVisible)}
       />
+      {isVisible && window.innerWidth < 768 && <div>Hello</div>}
     </MenuContainer>
   );
 };

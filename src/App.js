@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import HamburgerMenu from "./components/hamburger-menu";
 
 function App() {
