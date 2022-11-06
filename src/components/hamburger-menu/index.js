@@ -21,7 +21,9 @@ const HamburgerMenu = () => {
 export default HamburgerMenu;
 
 const MenuContainer = styled.div`
+  padding: 0.5rem 1rem;
   position: relative;
   display: flex;
   justify-content: flex-end;
+  background-color: #f0f;
 `;

@@ -12,5 +12,6 @@ function App() {
 export default App;
 
 const Container = styled.div`
+  margin: 0 auto;
   max-width: 1440px;
 `;
