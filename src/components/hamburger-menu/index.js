@@ -9,11 +9,21 @@ const HamburgerMenu = () => {
 
   return (
     <MenuContainer>
-      <GiHamburgerMenu
-        size={32}
-        onClick={() => handleMenuVisibility(isVisible)}
-      />
-      {isVisible && window.innerWidth < 768 && <div>Hello</div>}
+      {isVisible ? (
+        <div>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Portfolio</li>
+            <li>Kontakt</li>
+          </ul>
+        </div>
+      ) : (
+        <GiHamburgerMenu
+          size={32}
+          onClick={() => handleMenuVisibility(isVisible)}
+        />
+      )}
     </MenuContainer>
   );
 };
