@@ -4,7 +4,7 @@ import HamburgerMenu from "./components/hamburger-menu";
 function App() {
   return (
     <Container>
-      <HamburgerMenu /> Hello world
+      <HamburgerMenu />
     </Container>
   );
 }

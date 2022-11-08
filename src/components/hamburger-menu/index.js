@@ -8,32 +8,46 @@ const HamburgerMenu = () => {
   const handleMenuVisibility = (prev) => setIsVisible(!prev);
 
   return (
-    <MenuContainer>
-      {isVisible ? (
+    <>
+      <Container>
         <div>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Portfolio</li>
-            <li>Kontakt</li>
-          </ul>
+          <GiHamburgerMenu
+            size={32}
+            onClick={() => handleMenuVisibility(isVisible)}
+          />
         </div>
-      ) : (
-        <GiHamburgerMenu
-          size={32}
-          onClick={() => handleMenuVisibility(isVisible)}
-        />
-      )}
-    </MenuContainer>
+        {isVisible && (
+          <MenuContainer>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Portfolio</li>
+              <li>Kontakt</li>
+            </ul>
+          </MenuContainer>
+        )}
+      </Container>
+    </>
   );
 };
 
 export default HamburgerMenu;
 
+const Container = styled.div`
+  padding: 0.75rem 1.25rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  div:first-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
+
 const MenuContainer = styled.div`
-  padding: 0.5rem 1rem;
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  background-color: #f0f;
+  ul li {
+    padding: 0.75rem 0;
+  }
 `;
