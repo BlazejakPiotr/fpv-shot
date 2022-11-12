@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import HamburgerMenu from "./components/hamburger-menu";
+import HomePage from "./pages/home";
 
 function App() {
   return (
     <Container>
       <HamburgerMenu />
+      <HomePage />
     </Container>
   );
 }
